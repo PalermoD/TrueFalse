@@ -1,0 +1,36 @@
+<h1>Game</h1>
+
+
+
+<div class='game'>
+	
+</div>
+
+<center><button class="new" name="NEXT">Next</button></center>
+
+<script charset= "utf-8">
+	
+	var questions = new QuestionList();
+	var gameView; 
+	
+
+	$(function(){
+
+		$('button[name="NEXT"]').on('click', function(){
+			gameView.render();
+		})
+
+		gameView = new GameView({
+			collection: questions,
+			el: $('div.game')
+		});
+
+		questions.fetch({
+			success: function(){
+				gameView.render();
+			}
+		})
+
+		
+	});
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Game</title>
+	<link rel="stylesheet" href="/stylesheets/styles.css">
+	<script src= '/javascripts/lib/jquery.js'></script>
+	<script src= '/javascripts/lib/underscore.js'></script>
+	<script src= '/javascripts/lib/backbone.js'></script>
+	<script id='question-template' type="template">
+       <h2 class='question'> 
+
+         <%%= name %> 
+
+       </h2>
+       <h1 class='answer'>
+
+        . . . 
+       </h1>
+
+       <button class="true" data-value="true" type="button">True</button>
+       <button class="false" data-value="false" type="button">False</button>
+
+
+
+
+	</script>
+
+	<script src= '/javascripts/models/Question.js'></script>
+	<script src= '/javascripts/collections/QuestionList.js'></script>
+	<script src= '/javascripts/views/QuestionView.js'></script>
+	<script src= '/javascripts/views/Gameview.js'></script>
+</head>
+<body>
+	<%= yield %>
+	
+</body>
+</html>
